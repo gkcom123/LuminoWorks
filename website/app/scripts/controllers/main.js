@@ -7,6 +7,7 @@
  * # MainCtrl
  * Controller of the lWorksApp
  */
+
 angular.module('lWorksApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [

@@ -23,58 +23,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-      
+    <!--Header Section-->
+    <lworks-header></lworks-header>
+    <!--Banner Section-->
+    <lworks-banner></lworks-banner>
+
+    <!-- <div ui-view ng-controller= "lWorksAppController"></div> -->
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">LuminoWorks</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#login">Login</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        
-        <!-- /.container-fluid -->
-    </nav>
-    <div class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <div class="intro-heading">LuminoWorks</div>
-                        <div class="searchcenters">
-                            <input name="locationfield" id="locationfield" type="text" class="input-text" value="Location" placeholder="Location">
-                        </div>
-                       </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
     <!-- Service Section -->
     <div class="services">
         <div class="row">
@@ -91,7 +46,7 @@
                     <div class="imgcaption test"><img class="img-responsive" src="images/bride.jpg" /><div class="overlay"><h2>PHOTOGRAPHY</h2></div></div>
                 </div>
         </div>
-      </div>		
+    </div>
     <section id="services">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -99,7 +54,6 @@
                     <hr class="primary">
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
@@ -130,47 +84,19 @@
                     </div>
                 </div>
             </div>
- 
     </section>
-         <section class="bg-primary" id="about">
-        
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
-                    <hr class="light">
-                    <p class="text-faded">Luminoworks has everything you need to get professional service in no time! All of the services are free and easy to use. Happy LuminoWorking!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl">Get Started!</a>
-                </div>
-            </div>
+    <section class="bg-primary" id="about">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading">We've got what you need!</h2>
+                  <hr class="light">
+                  <p class="text-faded">Luminoworks has everything you need to get professional service in no time! All of the services are free and easy to use. Happy LuminoWorking!</p>
+                  <a href="#services" class="page-scroll btn btn-default btn-xl">Get Started!</a>
+              </div>
+          </div>
     </section>
-
-      <footer>
-                <div class="row">
-                    <div class="col-md-4">
-                        <span class="copyright">Copyright &copy; LuminoWorks 2016</span>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-inline quicklinks">
-                            <li><a href="#">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Terms of Use</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>    
-        </footer>      
- 
-
+    <!--Footer Section-->
+    <lworks-footer></lworks-footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -200,6 +126,11 @@
         <!--<script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>-->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/common.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/headercontroller.js"></script>
+        <script src="scripts/directives/lworksdirective.js"></script>
         <!-- endbuild -->
 </body>
 </html>
