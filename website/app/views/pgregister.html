@@ -1,4 +1,505 @@
 <lworks-header></lworks-header>
 <div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script type="text/javascript">
+$(document).ready(function () {
+	$('.btnReview').click(function(){
+	var id =event.target.id+"tab";
+	    $('#'+id).tab('show')
+	});
+});
+</script>
+	<div class="container-fluid">
+		<h3>Photographer Registration</h3>
+	</div>
+	<div id="exTab3" class="container-fluid">
+		<ul class="nav nav-pills" style="background-color: #212121;">
+			<li class="active"><a data-toggle="tab" data-target="#1b">User Info</a>
+			</li>
+			<li><a  data-toggle="tab" id="btn1tab" data-target="#2b">Photography
+					Info</a></li>
+			<li><a data-toggle="tab" id="btn2tab" data-target="#3b">Pricing
+					Information</a></li>
+			<li><a  data-toggle="tab" id="btn3tab" data-target="#4b">Bank
+					Account</a></li>
+		</ul>
+
+		<div class="tab-content clearfix col-lg-12" style="background-color:;">
+			<div class="tab-pane active" id="1b">
+				<form role="form">
+					<div class="container-fluid">
+						<br> <span class="col-lg-4">
+							<div class="form-group">
+								<input type="text" class="form-control" id="email"
+									placeholder="Full Name">
+							</div>
+
+							<div class="form-group">
+								<input type="email" class="form-control" id="email"
+									placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="email"
+									placeholder="Password">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="email"
+									placeholder="Confirm Password">
+							</div>
+
+							<div class="form-group">
+								<span class="col-lg-6" style="padding: 0px;"><input
+									type="text" class="form-control" id="phone"
+									placeholder="Phone Number"></span> <span class="col-lg-3">
+									<button type="button" class="btn btn-custom" id="verify"
+										data-toggle="modal" data-target="#phoneModal">GENERATE
+										OTP</button>
+								</span>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-12">
+									<small style="color: #E65100; font-family: Lucida Console;"
+										id="phonestatus">Note:- Phone number to be validated
+										by OTP. Please provide a valid phone number.</small>
+								</div>
+							</div>
+						</span>
+
+						<script type="text/javascript">
+$(document).ready(function() {
+$('#phone').change(function(){
+	$('#verify').prop('disabled', false);
+	$('#verify').html('GENERATE OTP');
+	$('#phonestatus').html("Note:- Phone number to be validated by OTP. Please provide a valid phone number.");
+})
+$('#validatePhone').click(function(){
+	$('#phonestatus').html("Valid Phone Number. Phone verification complete.");
+	$('#verify').prop('disabled', true);
+	$('#verify').html('Verified');
+});
+});
+</script>
+						<!-- VERIFY PHONE NUMBER MODAL -->
+						<div class="modal fade" id="phoneModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content" style="background-color: #34495e;">
+									<div class="modal-body">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<br /> <br />
+										<div class="form-group">
+											<label class="col-lg-2 control-label"></label>
+											<div class="col-lg-10">
+												<small style="color: #FFC300; font-family: Lucida Console;">
+													Please enter the OTP sent to the given phone number. </small>
+											</div>
+										</div>
+										<br />
+										<div class="form-group">
+											<span class="col-lg-2" style="padding: 0px;"></span> <span
+												class="col-lg-6" style="padding: 0px;"><input
+												type="text" class="form-control" id="" placeholder="OTP"></span>
+											<span class="col-lg-4">
+												<button type="button" class="btn btn-warning"
+													data-dismiss="modal" id="validatePhone">
+													<span
+														style="color: black; font-weight: bold; font-family: Lucida Console">VALIDATE</span>
+												</button>
+											</span>
+										</div>
+										<br /> <br /> <br />
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- VERIFY PHONE NUMBER MODAL -->
+
+						<span class="col-lg-4">
+							<fieldset class="well the-fieldset">
+								<legend class="the-legend">Address</legend>
+								<div class="form-group">
+									<label class="radio-inline"> <input type="radio"
+										name="optradio">Home
+									</label> <label class="radio-inline"> <input type="radio"
+										name="optradio" checked="checked">Office
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id=""
+										placeholder="Address line 1">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id=""
+										placeholder="Address line 2">
+								</div>
+								<div class="form-group">
+									<select class="form-control" style="cursor: pointer">
+										<option value="select" id="placeholde" selected disabled>CITY</option>
+										<option value="HUBLI">HUBLI</option>
+										<option value="MYSORE">MYSORE</option>
+										<option value="BANGALORE">BANGALORE</option>
+										<option value="DELHI">DELHI</option>
+										<option value="HYDRABAD">HYDRABAD</option>
+										<option value="CHENNAI">CHENNAI</option>
+										<option value="PUNE">PUNE</option>
+										<option value="MUMBAI">MUMBAI</option>
+										<option value="SOLAPUR">SOLAPUR</option>
+										<option value="DHARWAD">DHARWAD</option>
+										<option value="KOLKATA">KOLKATA</option>
+										<option value="RAIPUR">RAIPUR</option>
+										<option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id=""
+										placeholder="zip/postal code">
+								</div>
+							</fieldset>
+						</span>
+					</div>
+					<div class="container-fluid">
+						<span class="col-lg-3"> </span> <span class="col-lg-5 text-right">
+							<a class="btn btn-primary btnReview" id="btn1">Continue</a>
+						</span> <span class="col-lg-4"> </span>
+					</div>
+					<br>
+				</form>
+			</div>
+			<div class="tab-pane" id="2b">
+				<div class="container-fluid">
+					<br> <span class="col-lg-4">
+						<div class="form-group">
+							<select class="form-control" id="sel">
+								<option>PROFICIENCY</option>
+								<option>STUDENT</option>
+								<option>AMATEUR</option>
+								<option>HOBBYIST</option>
+								<option>PROFESSIONAL</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#photostyle').multiselect();
+                                    });
+                                </script>
+							<select id="photostyle" multiple="multiple">
+								<option value="ALL">All Styles</option>
+								<option value="Wedding">Wedding</option>
+								<option value="Birthday">Birthday</option>
+								<option value="Travel">Travel</option>
+								<option value="Portrait">Portrait</option>
+								<option value="Commercial">Commercial</option>
+								<option value="Architectural">Architectural</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" id="zipcode"
+								placeholder="Camera used ">
+						</div>
+
+					</span> <span class="col-lg-8">
+
+						<div class="form-group">
+							<small style="font-family: Lucida Console">ADD CITES AND
+								CORRESPONDING AREAS WHERE YOU PROVIDE YOUR SERVICE.</small>
+						</div>
+
+						<div class="form-group">
+
+							<div class="panel panel-default col-lg-6">
+								<span style="padding: 10px;"> <small id="foo"><p
+											id="noshow" style="font-family: Lucida Console;">NO
+											CITIES ADDED</p></small></span>
+							</div>
+							<div class="col-lg-6">
+								<button type="button" class="btn btn-custom" data-toggle="modal"
+									data-target="#cityModal">ADD CITIES</button>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+
+							<script type="text/javascript">
+						var removeCity=function(elmnt){
+								$("#selCity option[value=" + elmnt.id + "]").removeAttr('disabled');
+								$("#foo #div"+elmnt.id).remove();
+								$("#foo #"+elmnt.id).remove();
+								//alert($("#foo").find("#div"+elmnt.id).length)
+								if($("#foo").find("div").length==0){
+									$('#foo').append("<p id=\"noshow\" style=\"font-family: Lucida Console;\"> No Cities Added</p>");
+								}
+							}
+                                    $(document).ready(function() {
+                                        $('#addcity').click(function(){
+                                        	var cityseltd = $("#selCity").val();
+                                        	 $( "#selCity option:selected" ).each(function() {
+                                        		//alert($( this ).val() == 'select')
+                                        		// alert($( this ).attr('disabled') == 'disabled')
+                                        		 
+                                        		 if ($( this ).attr('disabled') == 'disabled' && $( this ).val() == 'select') {
+                                        			 $('#citymsg').html('Not a valid selection.');
+												}else 	if($( this ).attr('disabled') == 'disabled') {
+													$('#citymsg').html('This city is already added.');
+												}
+                                        	 });
+                                        	if(cityseltd == null){
+                                        		return false;
+                                        	}
+                                        	$('#citymsg').html('');
+                                        	$("#foo #noshow").remove();
+                                        	
+                                        	$('#foo').append("<div id=\"div"+cityseltd+"\" ><span class=\"col-lg-10\">"+cityseltd
+                                        			+"</span><span class=\"col-lg-2\">"
+                                        			+"<span class=\"glyphicon glyphicon-remove\" style=\"cursor:pointer;color:red;\" onclick=\"removeCity(this)\" id=\""+cityseltd+"\"></span></span></div>");
+                                        	 $("#selCity option:selected").attr('disabled');
+                                        
+                                        	$("#selCity option[value=" + $("#selCity").val() + "]").attr('disabled','disabled');
+                                        	$("#selCity").removeAttr('selected').find('option:first').attr('selected', 'selected');
+                                        	
+                                        });
+                                    });
+                                </script>
+						</div> <!--  ADD CITY  Modal -->
+						<div class="modal fade" id="cityModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<button type="button" class="close" data-dismiss="modal"
+											style="">&times;</button>
+										<br />
+										<div class="form-group">
+											<label class="col-lg-2 control-label"></label>
+											<div class="col-lg-10">
+												<small style="color: #FFC300; font-family: Lucida Console;"
+													id="citymsg"></small>
+											</div>
+										</div>
+										<br />
+
+
+										<div class="form-group row">
+											<span class="col-lg-5" style="margin-left: 15px;"><select
+												class="form-control" id="selCity" style="cursor: pointer">
+													<option value="select" id="placeholde" selected disabled>PLEASE
+														SELECT CITY</option>
+													<option value="HUBLI">HUBLI</option>
+													<option value="MYSORE">MYSORE</option>
+													<option value="BANGALORE">BANGALORE</option>
+													<option value="DELHI">DELHI</option>
+													<option value="HYDRABAD">HYDRABAD</option>
+													<option value="CHENNAI">CHENNAI</option>
+													<option value="PUNE">PUNE</option>
+													<option value="MUMBAI">MUMBAI</option>
+													<option value="SOLAPUR">SOLAPUR</option>
+													<option value="DHARWAD">DHARWAD</option>
+													<option value="KOLKATA">KOLKATA</option>
+													<option value="RAIPUR">RAIPUR</option>
+													<option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
+											</select></span> <span class="col-lg-4"> <script
+													type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#areaselect').multiselect();
+                                    });
+                                </script> <select id="areaselect"
+												multiple="multiple">
+													<option value="ALL">ALL AREAS</option>
+													<option value="JAYANAGAR">JAYANAGAR</option>
+													<option value="VIDYANAGAR">VIDYANAGAR</option>
+													<option value="RAJAJINAGAR">RAJAJINAGAR</option>
+													<option value="VIJAYNAGAR">VIJAYNAGARVIJAYNAGARVIJAYNAGARVIJAY</option>
+													<option value="BTM">BTM LAYOUT</option>
+													<option value="JP NAGAR">JP NAGAR</option>
+											</select>
+											</span> <span class="col-lg-2" style="margin-right: 15px;">
+												<button type="button" class="btn btn-warning"
+													data-dismiss="modal" id="addcity">
+													<span
+														style="color: black; font-weight: bold; font-family: Lucida Console">ADD
+														CITY</span>
+												</button>
+											</span>
+										</div>
+										<br> <br>
+
+									</div>
+
+								</div>
+							</div>
+						</div> <!-- ADD CITY MODAL --> <br />
+
+
+					</span>
+				</div>
+				<div class="container-fluid">
+
+					
+					<div class="form-group row">
+						<h4>Upload Pictures</h4>
+					</div>
+					<div class="form-group row">
+
+						<div class="col-lg-3">
+							<select class="form-control" style="cursor: pointer">
+								<option value="select" id="styleplaceholder" selected disabled>Photography
+									Style</option>
+								<option value="Wedding">Wedding</option>
+								<option value="Birthday">Birthday</option>
+								<option value="Travel">Travel</option>
+								<option value="Portrait">Portrait</option>
+								<option value="Commercial">Commercial</option>
+								<option value="Architectural">Architectural</option>
+							</select>
+						</div>
+						<div class="col-lg-2">
+							<input type="file">
+						</div>
+						<div class="col-lg-6">
+							<button type="button" class="btn btn-custom">UPLOAD</button>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="container-fluid">
+					<span class="col-lg-4"></span> <span class="col-lg-8">
+						<div class="form-group">
+							<div class="col-lg-6"></div>
+							<div class="col-lg-6">
+								<button type="submit" class="btn btn-primary btnReview"
+									id="btn2">Continue</button>
+							</div>
+						</div>
+					</span>
+
+				</div>
+
+			</div>
+			<!-- TAB 3 -->
+			<div class="tab-pane" id="3b" style="padding-top: 30px;">
+				<div class="container-fluid" style="padding-bottom: 10px;">
+
+					<div class="form-group col-lg-12">
+						<span class="col-lg-2"> CITY </span> <span class="col-lg-3">
+							PHOTOGRAPHY </span> <span class="col-lg-2"> PRICE </span> <span
+							class="col-lg-2"> DAYS </span> <span class="col-lg-2">
+							HOURS(PER DAY) </span> <span class="col-lg-1"> </span>
+					</div>
+					<div class="form-group col-lg-12">
+						<span class="col-lg-2"> <select class="form-control"
+							id="citypkg" style="cursor: pointer">
+								<option value="select" id="pkgplaceholder" selected disabled>SELECT
+									CITY</option>
+								<option value="HUBLI">HUBLI</option>
+								<option value="MYSORE">MYSORE</option>
+								<option value="BANGALORE">BANGALORE</option>
+								<option value="DELHI">DELHI</option>
+								<option value="HYDRABAD">HYDRABAD</option>
+								<option value="CHENNAI">CHENNAI</option>
+								<option value="PUNE">PUNE</option>
+								<option value="MUMBAI">MUMBAI</option>
+								<option value="SOLAPUR">SOLAPUR</option>
+								<option value="DHARWAD">DHARWAD</option>
+								<option value="KOLKATA">KOLKATA</option>
+								<option value="RAIPUR">RAIPUR</option>
+								<option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
+						</select>
+						</span> <span class="col-lg-3"> <select class="form-control"
+							id="pkgstyle" style="cursor: pointer">
+								<option value="select" id="styleplaceholder" selected disabled>Photography
+									Style</option>
+								<option value="Wedding">Wedding</option>
+								<option value="Birthday">Birthday</option>
+								<option value="Travel">Travel</option>
+								<option value="Portrait">Portrait</option>
+								<option value="Commercial">Commercial</option>
+								<option value="Architectural">Architectural</option>
+						</select>
+
+						</span> <span class="col-lg-2"> <select class="form-control"
+							id="pkgcost" style="cursor: pointer">
+								<option value="1000" id="pkgcostplaceholder">Price</option>
+								<option value="2000">2000</option>
+								<option value="3000">3000</option>
+								<option value="4000">4000</option>
+								<option value="5000">5000</option>
+								<option value="6000">6000</option>
+								<option value="7000">7000</option>
+								<option value="8000">8000</option>
+						</select>
+						</span> <span class="col-lg-2"> <select class="form-control"
+							id="pkgcost" style="cursor: pointer">
+								<option value="1000" id="pkgcostplaceholder">DAYS</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+						</select>
+						</span> <span class="col-lg-2"> <select class="form-control"
+							id="pkgcost" style="cursor: pointer">
+								<option value="1000" id="pkgcostplaceholder">HOURS</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+						</select>
+						</span> <span class="col-lg-1">
+							<button type="button" class="btn btn-custom">ADD</button>
+						</span>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label for="comment" style="font-weight: normal;">Additional
+								Information:</label>
+							<textarea class="form-control" rows="1" id="comment"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-primary btnReview" id="btn3">CONTINUE</button>
+						</div>
+					</div>
+				</div>
+				<br> <br>
+			</div>
+			<!-- TAB 3 -->
+			<!-- TAB 4 -->
+			<div class="tab-pane" id="4b" style="padding-top: 30px;">
+
+				<div class="form-group row">
+					<span class="col-lg-2"></span><span class="col-lg-4"><input
+						type="text" class="form-control" id="" placeholder="Bank Name"></span><span
+						class="col-lg-4"></span>
+				</div>
+				<div class="form-group row">
+					<span class="col-lg-2 "></span><span class="col-lg-4"><input
+						type="text" class="form-control" id=""
+						placeholder="Account Number"></span><span class="col-lg-4"></span>
+				</div>
+				<div class="form-group row">
+					<span class="col-lg-2"></span><span class="col-lg-4"><input
+						type="text" class="form-control" id="" placeholder="PAN Number"></span><span
+						class="col-lg-4"></span>
+				</div>
+				<div class="form-group row">
+					<span class="col-lg-2"></span><span class="col-lg-4"><button
+							type="button" class="btn btn-primary">SUBMIT</button></span><span
+						class="col-lg-4"></span>
+				</div>
+			</div>
+		
+			<!-- TAB 4 -->
+		</div>
+	</div>
     
 </div>
+<lworks-footer></lworks-footer>
