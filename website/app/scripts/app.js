@@ -20,6 +20,10 @@ lWorksApp.config(['$routeProvider',
       templateUrl: '/views/pgregister.html',
       controller: 'PgregistrationCtrl'
     }).
+    when('/login', {
+      templateUrl: '/views/login.html',
+      controller: 'LogincontrollerCtrl'
+    }).
     otherwise({
           redirectTo: '/'
     });
