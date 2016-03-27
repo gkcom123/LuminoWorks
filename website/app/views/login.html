@@ -1,3 +1,156 @@
 <lworks-header></lworks-header>
-<div></div>
+<div>
+<br>
+<br>
+<br>
+<br>
+    <script type="text/javascript">
+var loginModal = function(){
+$('#modal-login').show();	
+$('#modal-register').hide();
+$('#modal-forgot').hide();
+}
+$(document).ready(function () {
+	$('#regbtn').click(function(){
+		$('#modal-register').show();
+		$('#modal-login').hide();
+	});
+	$('#pwdlstbtn').click(function(){
+		$('#modal-forgot').show();
+		$('#modal-register').hide();
+		$('#modal-login').hide();
+	});
+	
+	$('.close').click(function(){
+		loginModal();
+	});
+	$('.loginbtn').click(function(){
+		loginModal();
+	});
+	
+	loginModal();
+		
+});
+</script>
+
+
+	<div class="modal-dialog">
+    	<div class="modal-content" id="modal-login">
+      		<div class="modal-header login_modal_header">
+        		<h3 class="modal-title" id="myModalLabel">Login to Lumino</h3>
+      		</div>
+      		<div class="modal-body login-modal">
+      			<p>Login to Lumino to access your account or to book a photographer. Lumino team is glad to serve you by providing you the most renowned photographers in your area.</p>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class='modal-body-left'>
+	        			<div class="form-group">
+		              		<input type="text" id="username" placeholder="Email/Phone" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+		            	<div class="form-group">
+		            	  	<input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+		
+		            	<a href="#" class="btn btn-primary modal-login-btn">Login</a>
+		            	<a class="login-link1 text-center" id="pwdlstbtn">Lost your password?</a>
+	        		</div>
+	        	
+	        		<div class='modal-body-right'>
+	        			<div class="modal-social-icons">
+	        				<a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<a href='#' class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Sign In with Twitter </a>
+	        				<a href='#' class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        				<a href='#' class="btn btn-default linkedin"> <i class="fa fa-linkedin modal-icons"></i> Sign In with Linkedin </a>
+	        			</div> 
+	        		</div>	
+	        		<div id='center-line'> OR </div>
+	        	</div>																												
+        		<div class="clearfix"></div>
+        		
+        		<div class="form-group modal-register-btn">
+        			<button class="btn btn-default" id="regbtn"> New User Please Register</button>
+        		</div>
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+    	
+    	
+    	
+    	
+    	
+    	<div class="modal-content" id="modal-register">
+      		<div class="modal-header login_modal_header">
+        		<h3 class="modal-title" id="myModalLabel">Register with Lumino</h3>
+      		</div>
+      		<div class="modal-body login-modal">
+      			<p></p>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class=''>
+	        			<div class="form-group">
+		              		<input type="text" id="username" placeholder="Email/Phone" value="" name="username" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+		
+		            	<div class="form-group">
+		            	  	<input type="password" id="login-pass" placeholder="Password" value="" name="pass" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+						<div class="form-group">
+		            	  	<input type="password" id="login-pass" placeholder="Confirm Password" name="confrmpss" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+		            	<a href="#" class="btn btn-primary modal-login-btn">Register</a>
+		            	<a  class="login-link2 text-center loginbtn" >login</a>
+	        		</div>
+	        	
+	        		
+	        	</div>																												
+        		<div class="clearfix"></div>
+        		
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+    	
+    	
+    	
+    	<div class="modal-content" id="modal-forgot">
+      		<div class="modal-header login_modal_header">
+        		<h3 class="modal-title" id="myModalLabel">Forgot Lumino Password?</h3>
+      		</div>
+      		<div class="modal-body login-modal">
+      			<p></p>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class=''>
+	        			<div class="form-group">
+		              		<input type="text" id="username" placeholder="Email/Phone" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+		
+		            	<a href="#" class="btn btn-primary modal-login-btn">Reset</a>
+		            	<a class="login-link2 text-center loginbtn">login</a>
+	        		</div>
+	        	
+	        		
+	        	</div>																												
+        		<div class="clearfix"></div>
+        		
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+
+	</div>
+
 <lworks-footer></lworks-footer>
