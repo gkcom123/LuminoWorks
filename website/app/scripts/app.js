@@ -8,13 +8,19 @@
  *
  * Main module of the application.
  */
-angular.module('lWorksApp',[]);
-angular.module('lWorksApp')
-.config(['$stateProvider', '$urlRouterProvider',
-    function( $stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
-
-    for(var state in Helper.routes){
-        $stateProvider.state( state, Helper.routes[state] );
-    }
+var lWorksApp = angular.module('lWorksApp',['ngRoute']);
+lWorksApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+    when('/', {
+      templateUrl: '/views/main.html',
+      controller: 'HomepageCtrl'
+    }).
+    when('/register', {
+      templateUrl: '/views/pgregister.html',
+      controller: 'PgregistrationCtrl'
+    }).
+    otherwise({
+          redirectTo: '/'
+    });
 }]);

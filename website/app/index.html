@@ -23,80 +23,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <!--Header Section-->
-    <lworks-header></lworks-header>
-    <!--Banner Section-->
-    <lworks-banner></lworks-banner>
-
-    <!-- <div ui-view ng-controller= "lWorksAppController"></div> -->
-    <!-- Navigation -->
-    <!-- Service Section -->
-    <div class="services">
-        <div class="row">
-		        <div class="col-lg-3 col-sm-4 col-xs-6">
-                    <div class="imgcaption test"><img class="img-responsive" src="images/bride.jpg" /><div class="overlay"><h2>Marriage</h2></div></div>
-                </div>
-                <div class="col-lg-3 col-sm-4 col-xs-6">
-                    <div class="imgcaption test"><img class="img-responsive" src="images/bride.jpg" /><div class="overlay"><h2>BirthDay</h2></div></div>
-                </div>
-		        <div class="col-lg-3 col-sm-4 col-xs-6">
-		            <div class="imgcaption test"><img class="img-responsive" src="images/bride.jpg" /><div class="overlay"><h2>PHOTOGRAPHY</h2></div></div>
-		        </div>
-                <div class="col-lg-3 col-sm-4 col-xs-6">
-                    <div class="imgcaption test"><img class="img-responsive" src="images/bride.jpg" /><div class="overlay"><h2>PHOTOGRAPHY</h2></div></div>
-                </div>
-        </div>
-    </div>
-    <section id="services">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Browse local professionals in your area</h3>
-                        <p class="text-muted">Or find one who will travel to your destination</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Powerful filtering capabilities</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Competitive Prcing</h3>
-                        <p class="text-muted">That suits everyone needs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Collect your favorites</h3>
-                        <p class="text-muted">Review and contact your favorites in one convenient place</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class="bg-primary" id="about">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <h2 class="section-heading">We've got what you need!</h2>
-                  <hr class="light">
-                  <p class="text-faded">Luminoworks has everything you need to get professional service in no time! All of the services are free and easy to use. Happy LuminoWorking!</p>
-                  <a href="#services" class="page-scroll btn btn-default btn-xl">Get Started!</a>
-              </div>
-          </div>
-    </section>
-    <!--Footer Section-->
-    <lworks-footer></lworks-footer>
+    <div ng-view></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -123,14 +50,13 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <!--<script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>-->
         <script src="scripts/app.js"></script>
         <script src="scripts/common.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/headercontroller.js"></script>
         <script src="scripts/directives/lworksdirective.js"></script>
+        <script src="scripts/controllers/pgregistration.js"></script>
+        <script src="scripts/controllers/homepage.js"></script>
         <!-- endbuild -->
 </body>
 </html>

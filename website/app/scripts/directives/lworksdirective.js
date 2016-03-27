@@ -19,12 +19,12 @@ angular.module('lWorksApp')
 			restrict: 'EA',
 			replace: true,
 			templateUrl: '/views/banner.html'
-		}
+		};
 	})
   .directive('lworksFooter', function () {
 		return {
 			restrict: 'EA',
 			replace: true,
 			templateUrl: '/views/footer.html'
-		}
-	})
+		};
+	});

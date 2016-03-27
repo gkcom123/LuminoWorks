@@ -8,8 +8,8 @@
  * Controller of the lWorksApp
  */
 angular.module('lWorksApp')
-  .controller('HeadercontrollerCtrl','$scope','$state','localStorageService',
-              function ($rootScope,$scope,$state,localStorageService) {
+  .controller('HeadercontrollerCtrl'/*,'$scope','$state','localStorageService'*/,
+              function (/*$rootScope,$scope,$state,localStorageService*/) {
             //     function getUserProfile()
             //     {
             //         var lwHashId = localStorageService.get('lworks-id');
