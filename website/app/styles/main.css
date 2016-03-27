@@ -293,3 +293,100 @@ ul.quicklinks li a {
     margin-bottom: 50px;
   }
 }
+
+/* Pgregister*/
+#exTab1 .tab-content {
+	padding: 5px 15px;
+}
+
+#exTab2 h3 {
+	padding: 5px 15px;
+}
+
+/* remove border radius for the tab */
+#exTab1 .nav-pills>li>a {
+	border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+#exTab3 .nav-pills>li>a {
+	border-radius: 0px 0px 0 0;
+	color: #ECEFF1;
+}
+
+#exTab3 .nav-pills>li>a:hover {
+	background-color: #0277BD;
+}
+
+#exTab3 .tab-content {
+	padding: 5px 15px;
+}
+
+.the-legend {
+	border-style: none;
+	border-width: 0;
+	width: 80px;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 0;
+	color: #000;
+	font-family: Lucida Console;
+}
+
+.the-fieldset {
+	border: 2px groove threedface #444;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+	background-color: #fff;
+}
+
+.btn-custom {
+	color: #f4f6f7; 
+	background-color: #17202a;
+	background-color: #17a589;
+	font-weight: normal;
+	font-size: small;
+	font-family: Courier Console;
+}
+
+.btn-custom:hover,.btn-custom:focus,.btn-custom:active,.btn-custom.active
+	{
+	border-color: #fff;
+}
+
+/* Login Modal */
+
+.login_modal_footer{margin-top:5px;}
+.login_modal_header .modal-title {text-align: center;font-family:'Philosopher',sans-serif; }
+.form-group{position: relative;}
+.form-group .login-field-icon {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    transition: all 0.25s ease 0s;
+    padding-top: 2%;
+}
+.login-modal{
+    width:100%;
+    padding-bottom:20px;
+}
+.login_modal_header, .login_modal_footer {background: #059167 !important;color:#fff;}
+.modal-register-btn{margin: 4% 33% 2% 33% ;width:100%;}
+.login-modal input{height:40px; box-shadow: none; border:1px solid #ddd;}
+.modal-body-left{float:left; width:50%; padding-right:4%; border-right:4px solid #ddd;}
+.modal-body-right{float:right; width:47%;}
+.login-link1{padding:0 20%;}
+.login-link2{padding:0 48%;}
+.modal-social-icons{padding:0 10%;}
+.facebook, .twitter, .google, .linkedin {width:100%;height:40px; padding-top:2%; margin-top:2%;}
+.modal-icons{margin-left: -10px; margin-right: 20px;}
+.google, .google:hover{background-color:#dd4b39;border:2px solid #dd4b39;color:#fff;}
+.twitter, .twitter:hover{ background-color: #00aced; border:2px solid #00aced;color: #fff;}
+.facebook, .facebook:hover{background-color: #3b5999; border:2px solid #3b5999;color:#fff;}
+.linkedin, .linkedin:hover{background-color: #007bb6; border: 2px solid #007bb6; color:#fff;}
+#social-icons-conatainer{position: relative;}
+#center-line{position: absolute;  right: 271px;top: 80px;background:#ddd;  border: 4px solid #DDDDDD;border-radius: 20px;}
+.modal-login-btn{width:100%;height:40px; margin-bottom:10px;}
+#modal-launcher{margin: 30% 0 0 30%; }
+h1{border-bottom:5px solid #00BB64;}
