@@ -1,9 +1,11 @@
 <lworks-header></lworks-header>
-<div>
+
+<div class="pgreg">
     <br>
     <br>
     <br>
     <br>
+        <br>    <br>
     <script type="text/javascript">
 $(document).ready(function () {
 	$('.btnReview').click(function(){
@@ -11,10 +13,53 @@ $(document).ready(function () {
 	    $('#'+id).tab('show')
 	});
 });
+        
 </script>
-	<div class="container-fluid">
-		<h3>Photographer Registration</h3>
-	</div>
+
+    <script type="text/javascript">
+$(document).ready(function () {
+    
+ 	$('.multiselect-container').click(function(e){
+	var id =this.id;
+        var evt = e || window.event  
+        evt.stopPropagation();
+    
+        
+       var count =0;
+       var ele = '.'+id+' li input[type=checkbox]'
+       var selvals = '';
+       $(ele).each(function () {
+           if (this.checked) {
+               selvals = selvals+','+$(this).val();
+               count++;
+           }
+           
+       });
+       
+      if(count == 0){
+            $('#'+id+'btn').text($('#'+id+'btn').val());
+          $('#'+id+'btn').append( "<b class=\"caret\"></b>" );
+        }   else
+            {
+                $('#'+id+'btn').text('('+count+') Selected ');
+                $('#'+id+'btn').append( "<b class=\"caret\"></b>" );
+            }
+        $('#'+id+'hid').val(selvals.substring(1, selvals.length));
+        $('#'+id+'div').removeClass("btn-group").addClass("btn-group open")
+        //$('#'+id+'div').addClass('open')
+        /*All the selected values can be retreived from this hidden field*/
+     //alert('Area hidden = '+$('#areahid').val())
+        
+       
+	});
+    
+    
+});
+        
+</script>
+    
+    
+    
 	<div id="exTab3" class="container-fluid">
 		<ul class="nav nav-pills" style="background-color: #212121;">
 			<li class="active"><a data-toggle="tab" data-target="#1b">User Info</a>
@@ -181,22 +226,25 @@ $('#validatePhone').click(function(){
 							</select>
 						</div>
 						<div class="form-group">
-							<script type="text/javascript">
-                                    $(document).ready(function() {
-                                        $('#photostyle').multiselect();
-                                    });
-                                </script>
-							<select id="photostyle" multiple="multiple">
-								<option value="ALL">All Styles</option>
-								<option value="Wedding">Wedding</option>
-								<option value="Birthday">Birthday</option>
-								<option value="Travel">Travel</option>
-								<option value="Portrait">Portrait</option>
-								<option value="Commercial">Commercial</option>
-								<option value="Architectural">Architectural</option>
-							</select>
-						</div>
+                <div class="input-group btn-group">
+                <div class="btn-group" id="stylediv">
+                <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="stylebtn" title="None selected" value="Photography Styles  " style="width: auto;">Photography Styles <b class="caret"></b></button>
+                <ul class="multiselect-container dropdown-menu style" id="style">
+                <li><a href="javascript:void(0);"><label class="checkbox"><input  type="checkbox" value="wedding">Wedding</label></a></li>
+                <li><a href="javascript:void(0);"><label class="checkbox" ><input  type="checkbox" value="birthday"> Birthday</label></a></li>
+                <li><a href="javascript:void(0);"><label class="checkbox" ><input type="checkbox" value="commercial"> Commercial</label></a></li>
+                <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="pre-wedding"> Pre-Wedding</label></a></li>
+                <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="pepperoni"> Pepperoni</label></a></li>
+                <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="onions"> Onions</label></a></li>
+                </ul>
+                </div>
+                <input type="hidden"  name="stylesselected" id="stylehid" value=""/>
+                </div>
+                            
+                    </div>
 
+                    
+                    
 						<div class="form-group">
 							<input type="text" class="form-control" id="zipcode"
 								placeholder="Camera used ">
@@ -301,21 +349,21 @@ $('#validatePhone').click(function(){
 													<option value="KOLKATA">KOLKATA</option>
 													<option value="RAIPUR">RAIPUR</option>
 													<option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
-											</select></span> <span class="col-lg-4"> <script
-													type="text/javascript">
-                                    $(document).ready(function() {
-                                        $('#areaselect').multiselect();
-                                    });
-                                </script> <select id="areaselect"
-												multiple="multiple">
-													<option value="ALL">ALL AREAS</option>
-													<option value="JAYANAGAR">JAYANAGAR</option>
-													<option value="VIDYANAGAR">VIDYANAGAR</option>
-													<option value="RAJAJINAGAR">RAJAJINAGAR</option>
-													<option value="VIJAYNAGAR">VIJAYNAGARVIJAYNAGARVIJAYNAGARVIJAY</option>
-													<option value="BTM">BTM LAYOUT</option>
-													<option value="JP NAGAR">JP NAGAR</option>
-											</select>
+											</select></span> <span class="col-lg-4"> 
+                                           <div class="input-group btn-group">
+                                            <div class="btn-group" id="areadiv">
+                                            <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="areabtn" title="None selected" value="Select Areas " style="width: auto;">Select Areas <b class="caret"></b></button>
+                                            <ul class="multiselect-container dropdown-menu area" id="area">
+                                            <li><a href="javascript:void(0);"><label class="checkbox" id="rem"><input  type="checkbox" value="cheese">Cheese</label></a></li>
+                                            <li><a href="javascript:void(0);"><label class="checkbox" ><input  type="checkbox" value="tomatoes"> Tomatoes</label></a></li>
+                                            <li><a href="javascript:void(0);"><label class="checkbox" ><input type="checkbox" value="mozarella"> Mozzarella</label></a></li>
+                                            <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="mushrooms"> Mushrooms</label></a></li>
+                                            <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="pepperoni"> Pepperoni</label></a></li>
+                                            <li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="onions"> Onions</label></a></li>
+                                            </ul>
+                                            </div>
+                                            <input type="hidden"  name="areasselected" id="areahid" value=""/>
+                                            </div>
 											</span> <span class="col-lg-2" style="margin-right: 15px;">
 												<button type="button" class="btn btn-warning"
 													data-dismiss="modal" id="addcity">
