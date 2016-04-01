@@ -1,11 +1,11 @@
 <lworks-header></lworks-header>
 
-<div class="pgreg">
+<div class="cmnbkg">
     <br>
     <br>
     <br>
     <br>
-        <br>    <br>
+   
     <script type="text/javascript">
 $(document).ready(function () {
 	$('.btnReview').click(function(){
@@ -59,46 +59,50 @@ $(document).ready(function () {
 </script>
     
     
-    
-	<div id="exTab3" class="container-fluid">
-		<ul class="nav nav-pills" style="background-color: #212121;">
-			<li class="active"><a data-toggle="tab" data-target="#1b">User Info</a>
+	<div id="exTab3" class="bookingbgrnd container-fluid" style="margin:10px;">
+        <div class="centered-pills" style="border-bottom:1px solid #FF0000;">
+		<ul class="nav nav-pills custom-pill" >
+			<li class="active"><a href="javascript:void(0);" data-toggle="tab" data-target="#1b">user info</a>
 			</li>
-			<li><a  data-toggle="tab" id="btn1tab" data-target="#2b">Photography
-					Info</a></li>
-			<li><a data-toggle="tab" id="btn2tab" data-target="#3b">Pricing
-					Information</a></li>
-			<li><a  data-toggle="tab" id="btn3tab" data-target="#4b">Bank
-					Account</a></li>
+			<li><a href="javascript:void(0);" data-toggle="tab" id="btn1tab" data-target="#2b">photography
+					info</a></li>
+			<li><a href="javascript:void(0);" data-toggle="tab" id="btn2tab" data-target="#3b">pricing
+					information</a></li>
+			<li><a href="javascript:void(0);"  data-toggle="tab" id="btn3tab" data-target="#4b">bank
+					account</a></li>
 		</ul>
-
+</div>
 		<div class="tab-content clearfix col-lg-12" style="background-color:;">
 			<div class="tab-pane active" id="1b">
+                <br>
+                
 				<form role="form">
 					<div class="container-fluid">
-						<br> <span class="col-lg-4">
+						<br> 
+                        <span class="col-lg-2"></span>
+                        <span class="col-lg-4">
 							<div class="form-group">
 								<input type="text" class="form-control" id="email"
-									placeholder="Full Name">
+									placeholder="FULL NAME">
 							</div>
 
 							<div class="form-group">
 								<input type="email" class="form-control" id="email"
-									placeholder="Email">
+									placeholder="EMAIL">
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" id="email"
-									placeholder="Password">
+									placeholder="PASSWORD">
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" id="email"
-									placeholder="Confirm Password">
+									placeholder="CONFIRM PASSWORD">
 							</div>
 
 							<div class="form-group">
 								<span class="col-lg-6" style="padding: 0px;"><input
 									type="text" class="form-control" id="phone"
-									placeholder="Phone Number"></span> <span class="col-lg-3">
+									placeholder="PHONE NUMBER"></span> <span class="col-lg-3">
 									<button type="button" class="btn btn-custom" id="verify"
 										data-toggle="modal" data-target="#phoneModal">GENERATE
 										OTP</button>
@@ -106,7 +110,7 @@ $(document).ready(function () {
 							</div>
 							<div class="form-group">
 								<div class="col-lg-12">
-									<small style="color: #E65100; font-family: Lucida Console;"
+									<small style="color:#fec503; font-family: Lucida Console;"
 										id="phonestatus">Note:- Phone number to be validated
 										by OTP. Please provide a valid phone number.</small>
 								</div>
@@ -147,10 +151,9 @@ $('#validatePhone').click(function(){
 												class="col-lg-6" style="padding: 0px;"><input
 												type="text" class="form-control" id="" placeholder="OTP"></span>
 											<span class="col-lg-4">
-												<button type="button" class="btn btn-warning"
-													data-dismiss="modal" id="validatePhone">
-													<span
-														style="color: black; font-weight: bold; font-family: Lucida Console">VALIDATE</span>
+												<button type="button" class="btn btn-primary btn-sm"
+													data-dismiss="modal" id="validatePhone" value="VALIDATE"> 
+												VALIDATE
 												</button>
 											</span>
 										</div>
@@ -161,11 +164,9 @@ $('#validatePhone').click(function(){
 							</div>
 						</div>
 						<!-- VERIFY PHONE NUMBER MODAL -->
-
+                        <span class="col-lg-1"></span>
 						<span class="col-lg-4">
-							<fieldset class="well the-fieldset">
-								<legend class="the-legend">Address</legend>
-								<div class="form-group">
+							<div class="form-group">
 									<label class="radio-inline"> <input type="radio"
 										name="optradio">Home
 									</label> <label class="radio-inline"> <input type="radio"
@@ -174,11 +175,11 @@ $('#validatePhone').click(function(){
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" id=""
-										placeholder="Address line 1">
+										placeholder="ADDRESS LINE 1">
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" id=""
-										placeholder="Address line 2">
+										placeholder="ADDRESS LINE 2">
 								</div>
 								<div class="form-group">
 									<select class="form-control" style="cursor: pointer">
@@ -200,22 +201,27 @@ $('#validatePhone').click(function(){
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" id=""
-										placeholder="zip/postal code">
+										placeholder="ZIP/POSTAL CODE">
 								</div>
-							</fieldset>
+							
 						</span>
 					</div>
 					<div class="container-fluid">
 						<span class="col-lg-3"> </span> <span class="col-lg-5 text-right">
-							<a class="btn btn-primary btnReview" id="btn1">Continue</a>
+							<a class="btn btn-raised" id="btn1">proceed</a>
 						</span> <span class="col-lg-4"> </span>
 					</div>
 					<br>
 				</form>
 			</div>
+        
+<!-- Tab 2 -->
 			<div class="tab-pane" id="2b">
-				<div class="container-fluid">
-					<br> <span class="col-lg-4">
+                
+				<div class="container-fluid" style="border-bottom:1px solid #fff;padding-top:25px;">
+                    <div class="row">
+                    <span class="col-lg-1"></span>
+					 <span class="col-lg-3">
 						<div class="form-group">
 							<select class="form-control" id="sel">
 								<option>PROFICIENCY</option>
@@ -228,7 +234,7 @@ $('#validatePhone').click(function(){
 						<div class="form-group">
                 <div class="input-group btn-group">
                 <div class="btn-group" id="stylediv">
-                <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="stylebtn" title="None selected" value="Photography Styles  " style="width: auto;">Photography Styles <b class="caret"></b></button>
+                <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="stylebtn" title="None selected" value="Photo  " style="width: auto;color:#000">&nbsp;&nbsp;&nbsp;Select Photo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="caret"></b></button>
                 <ul class="multiselect-container dropdown-menu style" id="style">
                 <li><a href="javascript:void(0);"><label class="checkbox"><input  type="checkbox" value="wedding">Wedding</label></a></li>
                 <li><a href="javascript:void(0);"><label class="checkbox" ><input  type="checkbox" value="birthday"> Birthday</label></a></li>
@@ -247,10 +253,12 @@ $('#validatePhone').click(function(){
                     
 						<div class="form-group">
 							<input type="text" class="form-control" id="zipcode"
-								placeholder="Camera used ">
+								placeholder="CAMERA USED ">
 						</div>
 
-					</span> <span class="col-lg-8">
+					</span> 
+                    <span class="col-lg-1"></span>
+                    <span class="col-lg-7">
 
 						<div class="form-group">
 							<small style="font-family: Lucida Console">ADD CITES AND
@@ -259,9 +267,9 @@ $('#validatePhone').click(function(){
 
 						<div class="form-group">
 
-							<div class="panel panel-default col-lg-6">
-								<span style="padding: 10px;"> <small id="foo"><p
-											id="noshow" style="font-family: Lucida Console;">NO
+							<div class="panel panel-default col-lg-6" style="background-color:#eee">
+								<span style="padding: 10px;color:red;"> <small id="foo"><p
+											id="noshow" style="font-family: Lucida Console;font-size:13px;">NO
 											CITIES ADDED</p></small></span>
 							</div>
 							<div class="col-lg-6">
@@ -280,7 +288,7 @@ $('#validatePhone').click(function(){
 								$("#foo #"+elmnt.id).remove();
 								//alert($("#foo").find("#div"+elmnt.id).length)
 								if($("#foo").find("div").length==0){
-									$('#foo').append("<p id=\"noshow\" style=\"font-family: Lucida Console;\"> No Cities Added</p>");
+									$('#foo').append("<p id=\"noshow\" style=\"font-family: Lucida Console;font-size:13px\">NO CITIES ADDED</p>");
 								}
 							}
                                     $(document).ready(function() {
@@ -316,8 +324,8 @@ $('#validatePhone').click(function(){
 						</div> <!--  ADD CITY  Modal -->
 						<div class="modal fade" id="cityModal" role="dialog">
 							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-body">
+								<div class="modal-content" style="background-color:#466c95">
+									<div class="modal-body" >
 										<button type="button" class="close" data-dismiss="modal"
 											style="">&times;</button>
 										<br />
@@ -352,7 +360,7 @@ $('#validatePhone').click(function(){
 											</select></span> <span class="col-lg-4"> 
                                            <div class="input-group btn-group">
                                             <div class="btn-group" id="areadiv">
-                                            <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="areabtn" title="None selected" value="Select Areas " style="width: auto;">Select Areas <b class="caret"></b></button>
+                                            <button type="button" class="multiselect dropdown-toggle btn" data-toggle="dropdown" id="areabtn" title="None selected" value="Select Areas " style="width: auto;color:#000">&nbsp;&nbsp;&nbsp;AREAS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="caret"></b></button>
                                             <ul class="multiselect-container dropdown-menu area" id="area">
                                             <li><a href="javascript:void(0);"><label class="checkbox" id="rem"><input  type="checkbox" value="cheese">Cheese</label></a></li>
                                             <li><a href="javascript:void(0);"><label class="checkbox" ><input  type="checkbox" value="tomatoes"> Tomatoes</label></a></li>
@@ -365,11 +373,9 @@ $('#validatePhone').click(function(){
                                             <input type="hidden"  name="areasselected" id="areahid" value=""/>
                                             </div>
 											</span> <span class="col-lg-2" style="margin-right: 15px;">
-												<button type="button" class="btn btn-warning"
+												<button type="button" class="btn btn-warning btn-sm"
 													data-dismiss="modal" id="addcity">
-													<span
-														style="color: black; font-weight: bold; font-family: Lucida Console">ADD
-														CITY</span>
+													ADD CITY
 												</button>
 											</span>
 										</div>
@@ -383,19 +389,20 @@ $('#validatePhone').click(function(){
 
 
 					</span>
+                </div>
+                    <div class="row"> <br> </div>
 				</div>
 				<div class="container-fluid">
 
 					
 					<div class="form-group row">
-						<h4>Upload Pictures</h4>
+				 <div class="col-lg-8"><h4>Upload Pictures</h4></div>
 					</div>
 					<div class="form-group row">
-
-						<div class="col-lg-3">
+                        
+						<div class="col-lg-2">
 							<select class="form-control" style="cursor: pointer">
-								<option value="select" id="styleplaceholder" selected disabled>Photography
-									Style</option>
+								<option value="select" id="styleplaceholder" selected disabled>PHOTO STYLE</option>
 								<option value="Wedding">Wedding</option>
 								<option value="Birthday">Birthday</option>
 								<option value="Travel">Travel</option>
@@ -418,20 +425,20 @@ $('#validatePhone').click(function(){
 						<div class="form-group">
 							<div class="col-lg-6"></div>
 							<div class="col-lg-6">
-								<button type="submit" class="btn btn-primary btnReview"
-									id="btn2">Continue</button>
+								<button type="submit" class="btn btn-raised"
+									id="btn2">proceed</button>
 							</div>
 						</div>
 					</span>
 
 				</div>
-
+<br>
 			</div>
 			<!-- TAB 3 -->
 			<div class="tab-pane" id="3b" style="padding-top: 30px;">
 				<div class="container-fluid" style="padding-bottom: 10px;">
 
-					<div class="form-group col-lg-12">
+					<div class="form-group col-lg-12" style="border-bottom:1px solid #FFF;">
 						<span class="col-lg-2"> CITY </span> <span class="col-lg-3">
 							PHOTOGRAPHY </span> <span class="col-lg-2"> PRICE </span> <span
 							class="col-lg-2"> DAYS </span> <span class="col-lg-2">
@@ -458,8 +465,7 @@ $('#validatePhone').click(function(){
 						</select>
 						</span> <span class="col-lg-3"> <select class="form-control"
 							id="pkgstyle" style="cursor: pointer">
-								<option value="select" id="styleplaceholder" selected disabled>Photography
-									Style</option>
+								<option value="select" id="styleplaceholder" selected disabled>PHOTO STYLE</option>
 								<option value="Wedding">Wedding</option>
 								<option value="Birthday">Birthday</option>
 								<option value="Travel">Travel</option>
@@ -470,7 +476,7 @@ $('#validatePhone').click(function(){
 
 						</span> <span class="col-lg-2"> <select class="form-control"
 							id="pkgcost" style="cursor: pointer">
-								<option value="1000" id="pkgcostplaceholder">Price</option>
+								<option value="1000" id="pkgcostplaceholder">PRICE</option>
 								<option value="2000">2000</option>
 								<option value="3000">3000</option>
 								<option value="4000">4000</option>
@@ -513,36 +519,39 @@ $('#validatePhone').click(function(){
 							<textarea class="form-control" rows="1" id="comment"></textarea>
 						</div>
 						<div class="form-group">
-							<button type="button" class="btn btn-primary btnReview" id="btn3">CONTINUE</button>
+							<button type="button" class="btn btn-raised" id="btn3">proceed</button>
 						</div>
 					</div>
+                    <br>
 				</div>
-				<br> <br>
+	<br><br><br> <br>
 			</div>
 			<!-- TAB 3 -->
 			<!-- TAB 4 -->
 			<div class="tab-pane" id="4b" style="padding-top: 30px;">
-
-				<div class="form-group row">
-					<span class="col-lg-2"></span><span class="col-lg-4"><input
-						type="text" class="form-control" id="" placeholder="Bank Name"></span><span
+               
+				<div class="form-group col-lg-12">
+					<span class="col-lg-4"></span><span class="col-lg-4"><input
+						type="text" class="form-control" id="" placeholder="BANK NAME"></span><span
 						class="col-lg-4"></span>
 				</div>
-				<div class="form-group row">
-					<span class="col-lg-2 "></span><span class="col-lg-4"><input
+				<div class="form-group col-lg-12">
+					<span class="col-lg-4"></span><span class="col-lg-4"><input
 						type="text" class="form-control" id=""
-						placeholder="Account Number"></span><span class="col-lg-4"></span>
+						placeholder="ACCOUNT NUMBER"></span><span class="col-lg-4"></span>
 				</div>
-				<div class="form-group row">
-					<span class="col-lg-2"></span><span class="col-lg-4"><input
-						type="text" class="form-control" id="" placeholder="PAN Number"></span><span
+				<div class="form-group col-lg-12">
+					<span class="col-lg-4"></span><span class="col-lg-4"><input
+						type="text" class="form-control" id="" placeholder="PAN NUMBER"></span><span
 						class="col-lg-4"></span>
 				</div>
-				<div class="form-group row">
-					<span class="col-lg-2"></span><span class="col-lg-4"><button
-							type="button" class="btn btn-primary">SUBMIT</button></span><span
+				<div class="form-group col-lg-12">
+					<span class="col-lg-4"></span><span class="col-lg-4"><button
+							type="button" class="btn btn-raised">submit</button></span><span
 						class="col-lg-4"></span>
 				</div>
+                <br><br><br><br><br>
+                
 			</div>
 		
 			<!-- TAB 4 -->
