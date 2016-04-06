@@ -903,3 +903,16 @@ h1{border-bottom:5px solid #00BB64;}
        }
 
 /* USER STORIES END */
+
+/* Image display Carousel*/
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+      height: 35em;
+	  }
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+        color:#AAFF00;
+	}

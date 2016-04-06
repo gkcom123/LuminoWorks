@@ -1,3 +1,4 @@
+
 <lworks-header></lworks-header>
 <!--Banner Section-->
 <div class="intro-header" style="padding:0px;">
@@ -22,15 +23,28 @@
                     <span class="col-lg-2"></span>
            </div>
                
-          
+      
+ <script> 
+$(document).ready(function(){
+$('.intro-header a').click(function(e) {
+    var eveid= e.target.id;
+   
+    $('html, body').animate({
+        scrollTop: $("#section-"+eveid).offset().top
+    }, 2100);
+     
+  // $.scrollTo($('#userstories'));
+});
+});
+              </script>
         </div>
 </div> </span>
         <span class="col-lg-3 text-right" style="vertical-align: middle;text-transform: full-width;font-size: 1.2em;font-weight:500;">
             <div>&nbsp;</div>
             <div>&nbsp;</div>
-            <div><a href="javascript:void(0)" style="color:#fff">How does it work?</a></div> 
-            <div><a href="javascript:void(0)" style="color:#fff">Read what users have to say.</a></div> 
-            <div><a href="javascript:void(0)" style="color:#fff">What's new & FREE :).</a></div> 
+            <div><a  id="howworks" href="javascript:void(0)" style="color:#fff">How does it work?</a></div> 
+            <div><a  id="userstories" href="javascript:void(0)" style="color:#fff">Read what users have to say.</a></div> 
+            <div><a  id="photosamples" href="javascript:void(0)" style="color:#fff">What's new & FREE :).</a></div> 
         </span>
     </div>
 <div class="row">
@@ -118,7 +132,7 @@
     </div>
 </div>
 <!-- Photo Gallery -->
-<div class="photosamples">
+<div class="photosamples" id="section-photosamples">
     
    
     <div class="container-fluid">
@@ -279,7 +293,48 @@
 </div>
  
 
+<div id="section-userstories">
 
+<div class="container-fluid" id="usrStry" style="background-color: rgba( 186, 104, 200 ,0.6);padding-bottom:40px;">
+<div><h4> Why users love Luminoworks.</h4> </div>
+<div><h5>Users share their experience with Luminoworks.</h5> </div>
+        <div class="container-fluid" id="stories">
+                <span  class="col-lg-4">
+                <div class="stry-bubble tri btm">
+                  <div class="strytext">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet luctus justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ut placerat libero, nec ullamcorper odio. Nunc odio sem, mollis sed euismod dictum, lobortis dapibus elit. Phasellus euismod lacinia dui, ut egestas erat dictum vel. Morbi imperdiet metus bibendum diam maximus, nec lacinia nisl hendrerit. Maecenas in semper arcu. </p>
+                  </div>
+                </div>
+                <div id="stryimgdiv" class="img-circle"></div>
+                </span>
+                <span  class="col-lg-4">
+                <div class="stry-bubble tri btm">
+                  <div class="strytext">
+                    <p>Nunc nunc ligula, hendrerit vel elementum eu. </p>
+                  </div>
+                </div>
+                <div id="stryimgdiv" class="img-circle"></div>
+                </span>
+                <span  class="col-lg-4">
+                <div class="stry-bubble tri btm">
+                  <div class="strytext">
+                    <p>Phasellus euismod lacinia dui.</p>
+                  </div>
+                </div>
+                <div id="stryimgdiv" class="img-circle"></div>
+                </span>
+                <span  class="col-lg-4">
+                <div class="stry-bubble tri btm">
+                  <div class="strytext">
+                    <p>Donec ut placerat libero, nec ullamcorper odio. Nunc odio sem, mollis sed euismod dictum, lobortis dapibus elit. Phasellus euismod lacinia dui, ut egestas erat dictum vel. Morbi imperdiet metus bibendum diam maximus, nec lacinia nisl hendrerit. Maecenas in semper arcu.</p>
+                  </div>
+                </div>
+                <div id="stryimgdiv" class="img-circle"></div>
+                </span>
+          </div>  
+</div>
+    
+</div>
 
 <!-- <div ui-view ng-controller= "lWorksAppController"></div> -->
 <!-- Navigation -->
@@ -335,54 +390,12 @@
 </div>
 
 
-<section id="userstories">
 
-<div class="container-fluid" id="usrStry" style="background-color: rgba( 186, 104, 200 ,0.6);padding-bottom:40px;">
-<div><h4> Why users love Luminoworks.</h4> </div>
-<div><h5>Users share their experience with Luminoworks.</h5> </div>
-        <div class="container-fluid" id="stories">
-                <span  class="col-lg-4">
-                <div class="stry-bubble tri btm">
-                  <div class="strytext">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet luctus justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ut placerat libero, nec ullamcorper odio. Nunc odio sem, mollis sed euismod dictum, lobortis dapibus elit. Phasellus euismod lacinia dui, ut egestas erat dictum vel. Morbi imperdiet metus bibendum diam maximus, nec lacinia nisl hendrerit. Maecenas in semper arcu. </p>
-                  </div>
-                </div>
-                <div id="stryimgdiv" class="img-circle"></div>
-                </span>
-                <span  class="col-lg-4">
-                <div class="stry-bubble tri btm">
-                  <div class="strytext">
-                    <p>Nunc nunc ligula, hendrerit vel elementum eu. </p>
-                  </div>
-                </div>
-                <div id="stryimgdiv" class="img-circle"></div>
-                </span>
-                <span  class="col-lg-4">
-                <div class="stry-bubble tri btm">
-                  <div class="strytext">
-                    <p>Phasellus euismod lacinia dui.</p>
-                  </div>
-                </div>
-                <div id="stryimgdiv" class="img-circle"></div>
-                </span>
-                <span  class="col-lg-4">
-                <div class="stry-bubble tri btm">
-                  <div class="strytext">
-                    <p>Donec ut placerat libero, nec ullamcorper odio. Nunc odio sem, mollis sed euismod dictum, lobortis dapibus elit. Phasellus euismod lacinia dui, ut egestas erat dictum vel. Morbi imperdiet metus bibendum diam maximus, nec lacinia nisl hendrerit. Maecenas in semper arcu.</p>
-                  </div>
-                </div>
-                <div id="stryimgdiv" class="img-circle"></div>
-                </span>
-          </div>  
-</div>
-    
-</section>
 
 <!--Footer Section-->
 <lworks-footer></lworks-footer>
-
-
-<script> 
+     
+     <script> 
 $(document).ready(function(){
   
   $(".srvcmoreicon").click(function(){
@@ -399,4 +412,9 @@ $(document).ready(function(){
     
 });
     
+    
+  
 </script>
+     
+
+
