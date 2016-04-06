@@ -829,8 +829,7 @@ h1{border-bottom:5px solid #00BB64;}
   }
   
 
- 
-  .bkngRow {
+.bkngRow {
   height: 50px;
   
   position: relative;
@@ -853,3 +852,54 @@ h1{border-bottom:5px solid #00BB64;}
 }
   .cut-text { text-overflow: ellipsis; overflow: hidden; width: 160px; height: 1.2em; white-space: nowrap; }
 /* Booking Details End*/
+
+
+/* USER STORIES */
+.stry-bubble {
+    /*top right bottom left*/
+	margin: 40px 40px 20px 40px;
+    display: inline-block;
+    position: relative;
+	height: auto;
+	background-color: rgba( 255, 255, 255 ,1);
+}
+
+.tri.btm:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+    right: auto;
+    top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent rgba( 255, 255, 255 ,1);
+}
+
+
+.strytext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+.strytext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+  
+#stryimgdiv{
+         width: 50px; height: 50px;
+         background: url("../images/logo1.png")  no-repeat ;
+         margin: 0px;
+        margin-left: 30px;
+       
+    }
+    
+#stories span{
+       margin: 10px 0px 0px 0px;
+       }
+
+/* USER STORIES END */
