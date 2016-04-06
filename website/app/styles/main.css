@@ -104,7 +104,8 @@ hr.light {
 footer {
   padding: 20px 20px;
   text-align: center;
-    background-color: ghostwhite;    
+    background-color: ghostwhite; 
+    
 }
 footer span.copyright {
   line-height: 40px;
@@ -162,6 +163,8 @@ ul.quicklinks li a {
     padding: 0px;
   color: #880e4f;
  font-family:'Philosopher',sans-serif;
+    height: 10px;
+    
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
@@ -200,11 +203,10 @@ ul.quicklinks li a {
 .navbar-default .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-    
   font-weight: 400;
   letter-spacing: 1px;
   color: #424242 ;
-    border-bottom: 2px solid rgba( 255, 255, 255 , 0.0);
+  border-bottom: 2px solid rgba( 255, 255, 255 , 0.0);
 }
 
 .navbar-default .nav li a:hover,
@@ -233,16 +235,13 @@ ul.quicklinks li a {
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: default;
+  cursor: pointer;
     padding: 0px;
     color: rgba(0,0,0,0);
-}
-.imgcaption img {
-    width: 100%;
-    height: 40px;
     object-fit: contain;
     overflow: hidden;
 }
+
 
 .imgcaption .overlay {
   width: 100%;
@@ -281,6 +280,8 @@ ul.quicklinks li a {
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
     border: none;
+     border-radius: 0px;
+    box-shadow: 0px 2px 1px #888888;
     
   }
   .navbar-default .navbar-brand {
@@ -289,10 +290,9 @@ ul.quicklinks li a {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     text-shadow: 0 1px 2px #ff80ab;
+    
   }
-  .navbar-default .navbar-nav > .active > a {
-    border-radius: 3px;
-  }
+
   .navbar-default.navbar-shrink {
     background-color: #F6358A;
     padding: 10px 0;
@@ -341,26 +341,25 @@ input:focus::-webkit-input-placeholder { opacity: 0.3 }
 input:focus:-moz-placeholder { opacity: 0.3 } /* FF 4-18 */
 input:focus::-moz-placeholder { opacity: 0.3 } /* FF 19+ */
 input:focus:-ms-input-placeholder { opacity: 0.3 } /* IE 10+ */
-
+textarea:focus::-webkit-input-placeholder { opacity: 0.3 }
+textarea:focus:-moz-placeholder { opacity: 0.3 } /* FF 4-18 */
+textarea:focus::-moz-placeholder { opacity: 0.3 } /* FF 19+ */
+textarea:focus:-ms-input-placeholder { opacity: 0.3 } /* IE 10+ */
 
 .lw-heading{
     color: #fff;
     font-size: 28px;
     text-shadow: 1px 2px 4px #330066  ;
     font-weight: 500;
-    
-    
     }
 
 /* Pgregister*/
 .cmnbkg{
-    
-    background-color:  #f8f9f9;
-    
+ padding:25px; 
 }
 
 #searchBox{
-  opacity: 0.7;
+    opacity: 0.7;
     border-radius: 25px;
     width: 100%;
   }
@@ -475,12 +474,68 @@ border-top: 2px solid rgba(255, 87, 51, 0.6);
 }
 .item img {
 	width: 220px;
-height:150px;	
+    height:150px;	
 }
 #carousel a{
 height:150px;
     color: rgba(170, 255, 0,1);
 }
+
+.thumbgal{padding-left: 5%;}
+.thumbgal img{
+    border-radius: 7px;
+    padding: 2px;
+    width: 200px;
+    height:150px;
+    
+}
+.thumbGal img{
+  border-radius:7px;
+  padding:4px;
+  }
+.item1 .thumb{
+    float: left;
+}
+
+.photosamples h3{
+    text-align: center;
+    text-transform: full-width;
+}
+
+
+
+
+.btn-thumb {
+	color: #f4f6f7; 
+	background-color:#00c853;
+	font-weight: normal;
+	font-size: small;
+border-radius: 0px;
+}
+
+.innerImg{
+    position:absolute;
+    z-index:5;
+    width:auto;
+    height: 22%; width: 22%;
+    left: 72%;
+    top:33%;
+}
+
+.outerImg{
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+}
+ 
+.thumbShadow {
+  filter: gray; /* IE6-9 */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
 /* -- Buttons types -------------------------------- */
 .btn-raised {
   font-size: 17px;
@@ -547,7 +602,8 @@ height:150px;
 .button1 {
     background-color: rgba( 170, 255, 0 ,0.7); 
     color: black; 
-    font-variant: small-caps
+    font-variant: small-caps;
+    letter-spacing: 1px;
     
 }
 .button1:hover {
@@ -573,6 +629,7 @@ height:150px;
   0 1px 2px 0 rgba(0, 0, 0, .24); 
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
   0 1px 2px 0 rgba(0, 0, 0, .24); 
+    outline:none;
 }
 #exTab3 .nav-pills > li.active > a{
     background-color: #ec7063  ;
@@ -583,6 +640,7 @@ height:150px;
   0 1px 2px 0 rgba(0, 0, 0, .24); 
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
   0 1px 2px 0 rgba(0, 0, 0, .24); 
+    outline:none;
 }
 
 
@@ -622,6 +680,98 @@ height:150px;
 	background-color: #fff;
 }
 
+/* Search */
+
+
+#panel
+{
+display:none;
+background-color: #fbfcfc ;
+padding: 0px;
+border-bottom: 2px solid #AAFF00;
+
+}
+
+.fixed{
+    position: fixed;
+    top:0;
+      z-index:6;
+      width: 100%;
+      color: #fff;
+     
+}
+.fixedPanel{
+    position: fixed;
+      z-index:6;
+      width: 100%;
+    overflow:visible;
+}
+    .fixedPanel .col-lg-2 {
+        padding: 2em;
+    }
+
+.btn-custom {
+	color: #222222; 
+	background-color:#F5E248;
+	font-weight: normal;
+	font-size: small;
+border-radius: 0px;
+
+}
+
+.btn-thumb {
+	color: #f4f6f7; 
+	background-color:#00c853;
+	font-weight: normal;
+	font-size: small;
+border-radius: 0px;
+}
+
+
+	  
+
+.innerImg{
+    position:absolute;
+    z-index:5;
+    width:auto;
+    height: 22%; width: 22%;
+    left: 72%;
+    top:33%;
+}
+
+.outerImg{
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+}
+ 
+.thumbShadow {
+  filter: gray; /* IE6-9 */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
+.filterDiv{
+border-bottom: 2px solid #AAFF00;
+background: rgba(0, 0, 0, 0.7); 
+width: 100%;
+position: fixed;
+color: #fff;
+z-index: 6;
+
+}
+    
+#boxWrapper {
+    position: relative;
+    height: 5em;
+}
+   
+    .selectbox {
+    position: absolute;
+   
+}
 
 
 /* Login Modal */

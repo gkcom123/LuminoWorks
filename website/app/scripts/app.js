@@ -24,6 +24,10 @@ lWorksApp.config(['$routeProvider',
       templateUrl: '/views/login.html',
       controller: 'LogincontrollerCtrl'
     }).
+    when('/search', {
+      templateUrl: '/views/pglist.html',
+      controller: 'PhotographerListcontrollerCtrl'
+    }).
     otherwise({
           redirectTo: '/'
     });
